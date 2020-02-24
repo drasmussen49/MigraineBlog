@@ -1,12 +1,20 @@
+using MigraineBlog.Controllers;
 using System;
 using Xunit;
 
 namespace MigraineBlog.Tests
 {
-    public class UnitTest1
+    public class HomeControllerTests
     {
+        HomeController controller;
+
+        public HomeControllerTests()
+        {
+
+        }
+        
         [Fact]
-        public void Test1()
+        public void Index_Returns_A_View()
         {
 
         }
