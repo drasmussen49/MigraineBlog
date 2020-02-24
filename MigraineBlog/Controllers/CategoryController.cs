@@ -8,5 +8,9 @@ namespace MigraineBlog.Controllers
 {
     public class CategoryController : Controller
     {
+        public ViewResult Index()
+        {
+            return View();
+        }
     }
 }

@@ -8,5 +8,9 @@ namespace MigraineBlog.Controllers
 {
     public class PostController : Controller
     {
+        public ViewResult Index()
+        {
+            return View();
+        }
     }
 }
