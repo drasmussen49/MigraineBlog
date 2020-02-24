@@ -10,7 +10,7 @@ namespace MigraineBlog.Controllers
     {
         public ViewResult Index()
         {
-            return null;
+            return View();
         }
     }
 }
