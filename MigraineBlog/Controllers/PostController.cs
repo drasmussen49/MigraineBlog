@@ -12,5 +12,9 @@ namespace MigraineBlog.Controllers
         {
             return View();
         }
+        public ViewResult Details()
+        {
+            return View();
+        }
     }
 }
