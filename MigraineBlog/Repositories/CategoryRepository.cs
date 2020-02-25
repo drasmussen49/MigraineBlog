@@ -8,6 +8,12 @@ namespace MigraineBlog.Repositories
 {
     public class CategoryRepository : IRepository<Category>
     {
+        private MigraineContext db;
+
+        public CategoryRepository(MigraineContext db)
+        {
+            this.db = db;
+        }
         public void Create(Category obj)
         {
             throw new NotImplementedException();

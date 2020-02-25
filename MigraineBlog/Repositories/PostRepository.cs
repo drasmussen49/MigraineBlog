@@ -8,6 +8,12 @@ namespace MigraineBlog.Repositories
 {
     public class PostRepository : IRepository<Post>
     {
+        private MigraineContext db;
+
+        public PostRepository(MigraineContext db)
+        {
+            this.db = db;
+        }
         public void Create(Post obj)
         {
             throw new NotImplementedException();

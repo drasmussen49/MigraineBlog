@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using MigraineBlog.Repositories;
+using MigraineBlog.Models;
 
 namespace MigraineBlog
 {
@@ -24,6 +26,10 @@ namespace MigraineBlog
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddDbContext<MigraineContext>();
+            services.AddScoped<IRepository<Category>, CategoryRepository>();
+            services.AddScoped<IRepository<Post>, PostRepository>();
+            services.AddScoped<IRepository<Tag>, TagRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -8,6 +8,12 @@ namespace MigraineBlog.Repositories
 {
     public class TagRepository : IRepository<Tag>
     {
+        private MigraineContext db;
+
+        public TagRepository(MigraineContext db)
+        {
+            this.db = db;
+        }
         public void Create(Tag obj)
         {
             throw new NotImplementedException();
