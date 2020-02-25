@@ -15,12 +15,33 @@ namespace MigraineBlog
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var connectionString = "Server=(localdb)\\mssqllocaldb;Database=ArcadeDb;Trusted_Connection=True;";
+            var connectionString = "Server=(localdb)\\mssqllocaldb;Database=MigraineDb;Trusted_Connection=True;";
             optionsBuilder.UseSqlServer(connectionString)
                           .UseLazyLoadingProxies();
             base.OnConfiguring(optionsBuilder);
         }
 
-        //New Override Method for OnModelCreating to enter seed data
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Category>().HasData(
+                new Category
+                {
+                    Id = 1,
+                    Name = "Personal Stories"
+                },
+
+                new Category
+                {
+                    Id = 2,
+                    Name = "Ask a Doctor"
+                },
+
+                new Category
+                {
+                    Id = 3,
+                    Name = "Tips & Tricks"
+                });
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

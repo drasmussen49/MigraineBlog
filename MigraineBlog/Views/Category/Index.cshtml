@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<MigraineBlog.Models.Category>
 @{
     Layout = null;
 }
@@ -11,5 +11,19 @@
     <title>Index</title>
 </head>
 <body>
+    <div class="header">Blog Categories:</div>
+    <div class="categories">
+        <div class="flex-container">
+
+            @foreach (var category in Model)
+            {
+                <div class="flex-item">
+                    <h3 class="flex-element">@category.Name</h3>
+                    <a href="/Category/Details/@category.Id" class="flex-element">To the blog</a>
+                </div>
+            }
+
+        </div>
+    </div>
 </body>
 </html>

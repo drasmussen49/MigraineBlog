@@ -26,7 +26,7 @@ namespace MigraineBlog.Repositories
 
         public IEnumerable<Category> GetAll()
         {
-            throw new NotImplementedException();
+            return db.Categories;
         }
 
         public Category GetById(int id)
