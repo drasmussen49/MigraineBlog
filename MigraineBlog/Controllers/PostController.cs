@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MigraineBlog.Models;
+using MigraineBlog.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,13 +10,20 @@ namespace MigraineBlog.Controllers
 {
     public class PostController : Controller
     {
+        IRepository<Post> postRepo;
+        public PostController(IRepository<Post> postRepo)
+        {
+            this.postRepo = postRepo;
+        }
         public ViewResult Index()
         {
-            return View();
+            var model = postRepo.GetAll();
+            return View(model);
         }
-        public ViewResult Details()
+        public ViewResult Details(int id)
         {
-            return View();
+            var model = postRepo.GetById(id);
+            return View(model);
         }
     }
 }
