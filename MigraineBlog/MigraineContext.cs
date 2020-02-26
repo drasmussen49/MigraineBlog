@@ -27,19 +27,22 @@ namespace MigraineBlog
                 new Category
                 {
                     Id = 1,
-                    Name = "Personal Stories"
+                    Name = "Personal Stories",
+                    Description = "This is a place where you can share your own stories relating to your migraines. It would help users to keep content related to your migraines/headaches and how they impact your life."
                 },
 
                 new Category
                 {
                     Id = 2,
-                    Name = "Ask a Doctor"
+                    Name = "Ask a Doctor",
+                    Description = "If you have a medically sensitive question relating to your migraine/headache conditions or medication, write a post about it here! A vetted team of doctors will read them and give advice."
                 },
 
                 new Category
                 {
                     Id = 3,
-                    Name = "Tips & Tricks"
+                    Name = "Tips & Tricks",
+                    Description = "If you have any tips for other migraineurs concerning avoidance methods, triggers or over-the-counter relief techniques, post about it here!"
                 });
             base.OnModelCreating(modelBuilder);
         }
