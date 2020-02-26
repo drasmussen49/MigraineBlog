@@ -14,29 +14,32 @@ namespace MigraineBlog.Repositories
         {
             this.db = db;
         }
-        public void Create(Post obj)
+        public void Create(Post post)
         {
-            throw new NotImplementedException();
+            db.Posts.Add(post);
+            db.SaveChanges();
         }
 
-        public void Delete(Post obj)
+        public void Delete(Post post)
         {
-            throw new NotImplementedException();
+            db.Posts.Remove(post);
+            db.SaveChanges();
         }
 
         public IEnumerable<Post> GetAll()
         {
-            throw new NotImplementedException();
+            return db.Posts;
         }
 
         public Post GetById(int id)
         {
-            throw new NotImplementedException();
+            return db.Posts.Single(p => p.Id == id);
         }
 
-        public void Update(Post obj)
+        public void Update(Post post)
         {
-            throw new NotImplementedException();
+            db.Posts.Update(post);
+            db.SaveChanges();
         }
     }
 }
