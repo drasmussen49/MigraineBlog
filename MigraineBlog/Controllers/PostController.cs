@@ -59,8 +59,26 @@ namespace MigraineBlog.Controllers
                 return View();
             }
             postRepo.Update(post);
-            return RedirectToAction("Details", "Category", new { id = post.CategoryId })
+            return RedirectToAction("Details", "Category", new { id = post.CategoryId });
         }
-        
+
+        [HttpGet]
+        public ViewResult Delete(int id)
+        {
+            var model = postRepo.GetById(id);
+            return View(model);
+        }
+       
+        [HttpPost]
+        public ActionResult Delete(Post post)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            var tempId = post.CategoryId;
+            postRepo.Delete(post);
+            return RedirectToAction("Details", "Category", new { id = tempId });
+        }
     }
 }
