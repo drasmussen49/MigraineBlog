@@ -30,10 +30,19 @@ namespace MigraineBlog.Controllers
         {
             return View();
         }
-        [HttpPost]
-        public ActionResult Create()
+        [HttpGet]
+        public ViewResult CreateByCategoryId(int id)
         {
-
+            ViewBag.CategoryId = id;
+            return View();
         }
+
+        [HttpPost]
+        public ActionResult Create(Post post)
+        {
+            postRepo.Create(post);
+            return RedirectToAction("Details", "Category", new { id = post.CategoryId });
+        }
+        
     }
 }
