@@ -25,5 +25,15 @@ namespace MigraineBlog.Controllers
             var model = postRepo.GetById(id);
             return View(model);
         }
+        [HttpGet]
+        public ViewResult Create()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Create()
+        {
+
+        }
     }
 }
