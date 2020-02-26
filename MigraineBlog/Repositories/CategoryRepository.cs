@@ -31,7 +31,7 @@ namespace MigraineBlog.Repositories
 
         public Category GetById(int id)
         {
-            throw new NotImplementedException();
+            return db.Categories.Single(c => c.Id == id);
         }
 
         public void Update(Category obj)

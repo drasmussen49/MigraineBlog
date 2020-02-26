@@ -22,9 +22,11 @@ namespace MigraineBlog.Controllers
 
             return View(model);
         }
-        public ViewResult Details()
+        public ViewResult Details(int id)
         {
-            return View();
+            var model = categoryRepo.GetById(id);
+            
+            return View(model);
         }
     }
 }

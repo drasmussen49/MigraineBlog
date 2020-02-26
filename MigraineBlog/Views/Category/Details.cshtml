@@ -1,4 +1,4 @@
-﻿
+﻿@model MigraineBlog.Models.Category
 @{
     Layout = null;
 }
@@ -8,9 +8,11 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Details</title>
+    <title>Category</title>
 </head>
 <body>
-    <h1>HENLO</h1>
+    <h1>@Model.Name</h1>
+
+    <a href="/Category/Index">Return to Category Index</a>
 </body>
 </html>
