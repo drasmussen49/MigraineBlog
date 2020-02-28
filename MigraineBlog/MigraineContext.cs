@@ -144,62 +144,62 @@ namespace MigraineBlog
             new PostTag
             {
                 Id = 3,
-                PostId = ,
-                TagId = ,
+                PostId = 2,
+                TagId = 5,
             },
             new PostTag
             {
                 Id = 4,
-                PostId = ,
-                TagId = ,
+                PostId = 4,
+                TagId = 2,
             },
             new PostTag
             {
                 Id = 5,
-                PostId = ,
-                TagId = ,
+                PostId = 4,
+                TagId = 5,
             },
             new PostTag
             {
-                Id = ,
-                PostId = ,
-                TagId = ,
+                Id = 6,
+                PostId = 3,
+                TagId = 2,
             },
             new PostTag
             {
-                Id = ,
-                PostId = ,
-                TagId = ,
+                Id = 7,
+                PostId = 3,
+                TagId = 1,
             },
             new PostTag
             {
-                Id = ,
-                PostId = ,
-                TagId = ,
+                Id = 8,
+                PostId = 5,
+                TagId = 4,
             },
             new PostTag
             {
-                Id = ,
-                PostId = ,
-                TagId = ,
+                Id = 9,
+                PostId = 5,
+                TagId = 5,
             },
             new PostTag
             {
-                Id = ,
-                PostId = ,
-                TagId = ,
+                Id = 10,
+                PostId = 6,
+                TagId = 5,
             },
             new PostTag
             {
-                Id = ,
-                PostId = ,
-                TagId = ,
+                Id = 11,
+                PostId = 6,
+                TagId = 2,
             },
             new PostTag
             {
-                Id = ,
-                PostId = ,
-                TagId = ,
+                Id = 12,
+                PostId = 6,
+                TagId = 3,
             });
             base.OnModelCreating(modelBuilder);
         }
