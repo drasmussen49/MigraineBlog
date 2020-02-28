@@ -11,6 +11,13 @@ namespace MigraineBlog.Tests
 {
     public class CategoryControllerTests
     {
+        CategoryController controller;
+        IRepository<Category> categoryMockRepo;
 
+        CategoryControllerTests()
+        {
+            categoryMockRepo = Substitute.For<IRepository<Category>>();
+            controller = new CategoryController(categoryMockRepo);
+        }
     }
 }
