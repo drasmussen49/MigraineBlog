@@ -96,7 +96,111 @@ namespace MigraineBlog
                 CategoryId = 3
             });
 
+            modelBuilder.Entity<Tag>().HasData(
+            new Tag
+            {
+                Id = 1,
+                Name = "#BadDay",
+            },
 
+            new Tag
+            {
+                Id = 2,
+                Name = "#SOS",
+            },
+
+            new Tag
+            {
+                Id = 3,
+                Name = "#Relief",
+            },
+
+            new Tag
+            {
+                Id = 4,
+                Name = "#Triggers",
+            },
+
+            new Tag
+            {
+                Id = 5,
+                Name = "#Advice",
+            });
+
+            modelBuilder.Entity<PostTag>().HasData(
+            new PostTag
+            {
+                Id = 1,
+                PostId = 1,
+                TagId = 2,
+            },
+
+            new PostTag
+            {
+                Id = 2,
+                PostId = 1,
+                TagId = 4,
+            },
+            new PostTag
+            {
+                Id = 3,
+                PostId = ,
+                TagId = ,
+            },
+            new PostTag
+            {
+                Id = 4,
+                PostId = ,
+                TagId = ,
+            },
+            new PostTag
+            {
+                Id = 5,
+                PostId = ,
+                TagId = ,
+            },
+            new PostTag
+            {
+                Id = ,
+                PostId = ,
+                TagId = ,
+            },
+            new PostTag
+            {
+                Id = ,
+                PostId = ,
+                TagId = ,
+            },
+            new PostTag
+            {
+                Id = ,
+                PostId = ,
+                TagId = ,
+            },
+            new PostTag
+            {
+                Id = ,
+                PostId = ,
+                TagId = ,
+            },
+            new PostTag
+            {
+                Id = ,
+                PostId = ,
+                TagId = ,
+            },
+            new PostTag
+            {
+                Id = ,
+                PostId = ,
+                TagId = ,
+            },
+            new PostTag
+            {
+                Id = ,
+                PostId = ,
+                TagId = ,
+            });
             base.OnModelCreating(modelBuilder);
         }
     }
