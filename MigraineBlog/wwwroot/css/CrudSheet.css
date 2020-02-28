@@ -1,0 +1,9 @@
+﻿.crudflexbox {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    text-align: center;
+    margin: auto;
+    border: 3px solid black;
+    padding: 1em;
+}

@@ -1,0 +1,35 @@
+﻿@model MigraineBlog.Models.Post
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>       
+
+    <div class="flex-items">
+        <h4>"@Model.Title"  written by @Model.Author on @DateTime.Now.ToString("MM/dd/yyyy")</h4>
+        <p>@Model.Body</p>
+
+    @foreach(var tag in Model.PostTags)
+    {
+        <p>@tag.Tag.Name</p>
+    }
+    </div>
+    <div class="flex-links">
+        
+        <a href="/Post/Update/@Model.Id">Update This Post</a>
+        <a href="/Post/Delete/@Model.Id">Delete This Post</a>
+    </div>
+    <br />
+    <div>
+        <a href="/Category/Details/@Model.CategoryId">Back to Blog</a>
+    </div>
+
+</body>
+</html>
