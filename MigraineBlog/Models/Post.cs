@@ -15,7 +15,7 @@ namespace MigraineBlog.Models
         public virtual Category Category { get; set; }
         public int CategoryId { get; set; }
 
-        //public ICollection<Tag> Tag { get; set; }
+        public virtual ICollection<PostTag> PostTags { get; set; }
 
     }
 }

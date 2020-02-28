@@ -45,6 +45,58 @@ namespace MigraineBlog
                     Name = "Tips & Tricks",
                     Description = "If you have any tips for other migraineurs concerning avoidance methods, triggers or over-the-counter relief techniques, post about it here!"
                 });
+
+            modelBuilder.Entity<Post>().HasData(
+             new Post
+             {
+                 Id = 1,
+                 Title = "Day Over",
+                 Body = "I had a migraine over the weekend, and it totally ended my day. I had to close all the blinds in the house, sit in my bed with no sounds around and lie there. Nothing's worse than having a migraine on your day off and you can't even enjoy it...",
+                Author = "Dan",
+                 CategoryId = 1
+             },
+            new Post
+            {
+                Id = 2,
+                Title = "Unofficial Diagnosis",
+                Body = "Hi. I have been suffering from what I THOUGHT were just regular old headaches, until I met someone who suffers from chronic migraines. Only then did I realize what I may be suffering from are actually migraines! Unfortunately, without having health insurance right now, I cannot afford the pricey trip to a doctor for an official diagnosis. I have been taking the advice of my migraine-having friends on how to identify my triggers and the best at-home solutions. It's not ideal, but it's the best I can do for now! Hang in there, everyone!  ",
+                Author = "Rhianna",
+                CategoryId = 1
+            },
+            new Post
+            {
+                Id = 3,
+                Title = ,
+                Body = ,
+                Author = ,
+                CategoryId = 2 
+            },
+            new Post
+            {
+                Id = 4,
+                Title = ,
+                Body = ,
+                Author = ,
+                CategoryId = 2
+            },
+            new Post
+            {
+                Id = 5,
+                Title = ,
+                Body = ,
+                Author = ,
+                CategoryId = 3
+            },
+            new Post
+            {
+                Id = 6,
+                Title = ,
+                Body = ,
+                Author = ,
+                CategoryId = 3
+            },
+
+
             base.OnModelCreating(modelBuilder);
         }
     }
