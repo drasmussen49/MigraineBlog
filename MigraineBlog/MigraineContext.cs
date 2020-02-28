@@ -52,7 +52,7 @@ namespace MigraineBlog
                  Id = 1,
                  Title = "Day Over",
                  Body = "I had a migraine over the weekend, and it totally ended my day. I had to close all the blinds in the house, sit in my bed with no sounds around and lie there. Nothing's worse than having a migraine on your day off and you can't even enjoy it...",
-                Author = "Dan",
+                 Author = "Dan",
                  CategoryId = 1
              },
             new Post
@@ -66,35 +66,35 @@ namespace MigraineBlog
             new Post
             {
                 Id = 3,
-                Title = ,
-                Body = ,
-                Author = ,
-                CategoryId = 2 
+                Title = "Is This Okay?",
+                Body = "I have taken four ibuprofen which are all 400mg each. Can I take more? Please? My migraine will not cease. SOS.",
+                Author = "Joan",
+                CategoryId = 2
             },
             new Post
             {
                 Id = 4,
-                Title = ,
-                Body = ,
-                Author = ,
+                Title = "Are Migraines Genetic?",
+                Body = "I am a 30 year old female, and I received my official diagnosis for migraines 5 years ago. My husband and I would like to have children, but I am worried I will pass this cursed gene onto my kids. Should I be worried?",
+                Author = "Rebecca",
                 CategoryId = 2
             },
             new Post
             {
                 Id = 5,
-                Title = ,
-                Body = ,
-                Author = ,
+                Title = "When In Doubt, Sleep It Out!",
+                Body = "I find that the best way to kill a migraine (or at least avoid the suffering!) is by... simply taking a nice long nap in a dark quiet place. Works like a charm!",
+                Author = "Jefferson",
                 CategoryId = 3
             },
             new Post
             {
                 Id = 6,
-                Title = ,
-                Body = ,
-                Author = ,
+                Title = "Everyday Helpful Tips",
+                Body = "Make sure to always get enough sleep, at least 8 hours per night. Drink enough water! Avoid loud sounds. Stay off screens for extended periods of time. If you start to feel the ol' familiar ache behind your eyes, try a temperature sleeping-mask! You can heat them up in the microwave OR stick them in the freezer and rest them over your eyes. Hope these help!",
+                Author = "Coral",
                 CategoryId = 3
-            },
+            });
 
 
             base.OnModelCreating(modelBuilder);
