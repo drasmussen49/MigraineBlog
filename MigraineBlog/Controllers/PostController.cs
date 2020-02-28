@@ -31,9 +31,10 @@ namespace MigraineBlog.Controllers
             return View();
         }
         [HttpGet]
-        public ViewResult CreateByCategoryId(int id)
+        public ViewResult CreateByCategoryId(int id, string categoryName)
         {
             ViewBag.CategoryId = id;
+            ViewBag.CategoryName = categoryName;
             return View();
         }
         
