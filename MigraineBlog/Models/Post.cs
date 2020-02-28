@@ -13,7 +13,7 @@ namespace MigraineBlog.Models
         public string Author { get; set; }
         //public DateTime PublishDate { get; set; }
         public virtual Category Category { get; set; }
-        public virtual int CategoryId { get; set; }
+        public int CategoryId { get; set; }
 
         //public ICollection<Tag> Tag { get; set; }
 
