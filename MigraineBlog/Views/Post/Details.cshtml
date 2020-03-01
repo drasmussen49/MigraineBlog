@@ -10,19 +10,19 @@
     <meta name="viewport" content="width=device-width" />
     <title>Details</title>
 </head>
-<body>       
+<body>
 
     <div class="flex-items">
         <h4>"@Model.Title"  written by @Model.Author on @DateTime.Now.ToString("MM/dd/yyyy")</h4>
         <p>@Model.Body</p>
 
-    @foreach(var tag in Model.PostTags)
-    {
-        <p>@tag.Tag.Name</p>
-    }
+        @foreach (var tag in Model.PostTags)
+        {
+            <p>@tag.Tag.Name</p>
+        }
     </div>
     <div class="flex-links">
-        
+
         <a href="/Post/Update/@Model.Id">Update This Post</a>
         <a href="/Post/Delete/@Model.Id">Delete This Post</a>
     </div>
@@ -30,6 +30,11 @@
     <div>
         <a href="/Category/Details/@Model.CategoryId">Back to Blog</a>
     </div>
+
+    <nav>
+        <a href="~/Home/Index"> HOME </a>
+        <a href="~/Category/Index"> BLOGS </a>
+    </nav>
 
 </body>
 </html>
