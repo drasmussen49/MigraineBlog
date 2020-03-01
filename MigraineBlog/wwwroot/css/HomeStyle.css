@@ -1,7 +1,4 @@
-﻿body {
-    margin-left: 3em;
-}
-
+﻿
 main {
     display: grid;
     grid-template-rows: 3fr 1fr;
@@ -39,15 +36,6 @@ section {
     margin-right: 1em;
     border-radius: 25px 25px;
 }
-
-
-h2 {
-    letter-spacing: 3px;
-    margin: 0;
-    padding: 0;
-    color: #F3B88D;
-}
-
 
 
 

@@ -4,6 +4,9 @@
     box-sizing: border-box;
 }
 
+body {
+    margin-left: 3em;
+}
 
 html {
     margin-top: 3em;
@@ -13,16 +16,24 @@ html {
 }
 
 h1 {
-    font-family: 'Walter Turncoat';
-    margin: .5em auto;
+    font-family: 'Hind Vadodara';
     font-size: 5em;
     letter-spacing: 7px;
+    font-variant: small-caps;
+    color: #F3B88D;
+    margin: 0 auto .5em auto;
+}
+
+h2 {
+    letter-spacing: 3px;
+    margin: 0;
+    padding: 0;
     color: #F3B88D;
 }
 
 
 
-button {
+.button {
     background: rgba(243, 184, 141, .5);
     border: none;
     font-size: 18px;
@@ -30,7 +41,7 @@ button {
     color: white;
 }
 
-    button:hover {
+    .button:hover {
         background: #F3B88D;
     }
 

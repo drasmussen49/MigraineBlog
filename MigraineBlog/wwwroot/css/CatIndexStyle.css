@@ -1,0 +1,11 @@
+﻿.container-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: rgba(198, 192, 190, .45);
+    min-width: .5vw;
+    max-width: 70vw;
+    margin: 2em 0 5em 0;
+    padding: 2em;
+}
