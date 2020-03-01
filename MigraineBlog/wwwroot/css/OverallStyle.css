@@ -17,5 +17,23 @@ h1 {
     margin: .5em auto;
     font-size: 5em;
     letter-spacing: 7px;
-    color: rgba(198, 192, 190, .45);
+    color: #F3B88D;
+}
+
+
+
+button {
+    background: rgba(243, 184, 141, .5);
+    border: none;
+    font-size: 18px;
+    padding: .5em;
+    color: white;
+}
+
+    button:hover {
+        background: #F3B88D;
+    }
+
+footer {
+    text-align: left;
 }

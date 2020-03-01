@@ -22,7 +22,6 @@ main {
 section {
     background-color: rgba(198, 192, 190, .45);
     min-width: .5vw;
-    color: black;
     margin: 0 auto;
     margin-bottom: 6em;
     padding: 2em;
@@ -42,10 +41,11 @@ section {
 }
 
 
-h2{
+h2 {
     letter-spacing: 3px;
     margin: 0;
     padding: 0;
+    color: #F3B88D;
 }
 
 
