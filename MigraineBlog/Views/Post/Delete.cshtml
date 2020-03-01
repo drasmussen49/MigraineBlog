@@ -34,13 +34,14 @@
                     <p>"@Html.DisplayFor(model => model.Body)"</p>
                 </dd>
             </dl>
-
-            <form asp-action="Delete" method="post">
-                <input type="submit" value="Delete" class="btn btn-danger" />
-                <input type="hidden" value="@Model.CategoryId" asp-for="CategoryId" />
-            </form>
-            <br />
-            <a href="/Category/Details/@Model.CategoryId">Go Back</a>
+            <div>
+                <form asp-action="Delete" method="post">
+                    <input id="button" type="submit" value="Delete" class="btn btn-danger" />
+                    <input type="hidden" value="@Model.CategoryId" asp-for="CategoryId" />
+                    <a href="/Category/Details/@Model.CategoryId"><button id="button">Go Back</button></a>
+                </form>
+                
+            </div>
         </div>
     </div>
 
