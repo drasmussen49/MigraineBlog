@@ -47,6 +47,18 @@
                         <span asp-validation-for="CategoryId" class="text-danger"></span>
                     </div>
                     <div class="form-group">
+                        <label asp-for="TagId" class="control-label"></label>
+                        @*<input asp-for="TagId" class="form-control" />
+                        <span asp-validation-for="TagId" class="text-danger"></span>*@
+                    <select name="TagId">
+                        <option value="1">#BadDay</option>
+                        <option value="2">#SOS</option>
+                        <option value="3">#Relief</option>
+                        <option value="4">#Triggers</option>
+                        <option value="5">#Advice</option>
+                    </select>
+                    </div>
+                    <div class="form-group">
                         <input type="submit" value="Create" class="btn btn-primary" />
                     </div>
                 </form>

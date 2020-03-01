@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MigraineBlog;
 
 namespace MigraineBlog.Migrations
 {
     [DbContext(typeof(MigraineContext))]
-    partial class MigraineContextModelSnapshot : ModelSnapshot
+    [Migration("20200301162748_TestingTagIdInPostModelForSelectTag")]
+    partial class TestingTagIdInPostModelForSelectTag
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
