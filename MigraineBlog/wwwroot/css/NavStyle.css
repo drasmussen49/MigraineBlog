@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    background: #C6C0BE;
+    background: rgba(198, 192, 190, .45);
 }
 
 nav a{

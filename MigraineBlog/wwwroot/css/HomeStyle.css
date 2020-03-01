@@ -1,3 +1,65 @@
-﻿
+﻿body {
+    margin-left: 3em;
+}
 
+main {
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    max-width: 70vw;
+    min-width: 150px;
+    margin-top: 0;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+section {
+    background-color: rgba(198, 192, 190, .45);
+    min-width: .5vw;
+    color: black;
+    margin: 0 auto;
+    margin-bottom: 6em;
+    padding: 2em;
+}
+
+#intro{
+    font-size: 16px;
+    
+}
+
+
+.sitePhoto{
+    float: left;
+    max-width: 300px;
+    margin-right: 1em;
+    border-radius: 25px 25px;
+}
+
+
+h2{
+    letter-spacing: 3px;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+.headshot{
+    max-width: 100px;
+    float: left;
+    margin: 0 1em 1em 0;
+    border-radius: 15%;
+
+}
+
+article{
+    padding: 2em 2em 2em 0;
+}
 
