@@ -8,7 +8,9 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Category</title>
+    <title>@Model.Name</title>
+    <link href="~/css/NavStyle.css" rel="stylesheet" />
+    <link href="~/css/OverallStyle.css" rel="stylesheet" />
 </head>
 <body>
     <h2>@Model.Name</h2>
@@ -33,10 +35,7 @@
         <a href="/Post/CreateByCategoryId/@Model.Id/@Model.Name">Create a blog post!</a>
     </div>
     <br />
-    <div>
-        <a href="/Category/Index">Return to Category Index</a>
-    </div>
-
+    
     <nav>
         <a href="~/Home/Index"> HOME </a>
         <a href="~/Category/Index"> BLOGS </a>

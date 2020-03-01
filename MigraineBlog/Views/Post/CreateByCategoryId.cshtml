@@ -10,12 +10,14 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>CreateByCategoryId</title>
+    <title>Create a Post</title>
+    <link href="~/css/NavStyle.css" rel="stylesheet" />
+    <link href="~/css/OverallStyle.css" rel="stylesheet" />
     <link href="~/css/CrudSheet.css" rel="stylesheet" />
 </head>
 <body>
     <div class="crudflexbox">
-        <h4>Post on the "@ViewBag.CategoryName" Blog!</h4>
+        <h4>Post on the "@ViewBag.CategoryName" Page</h4>
         <hr />
         <div class="row">
             <div class="col-md-4">
@@ -66,7 +68,7 @@
         </div>
 
         <div>
-            <a href="/Category/Details/@ViewBag.CategoryId">Back to List</a>
+            <a href="/Category/Details/@ViewBag.CategoryId">Back to "@ViewBag.CategoryName" </a>
         </div>
     </div>
 
