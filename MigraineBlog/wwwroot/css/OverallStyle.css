@@ -1,6 +1,22 @@
-﻿html {
+﻿* {    
+    font-family: 'Didact Gothic';
+    line-height: 1.7em;
+    box-sizing: border-box;
+}
+
+
+html {
     margin-top: 3em;
     font-size: 14px;
-    background: #808080;
-    
+    background: #4C5D68;
+}
+
+h1 {
+    font-family: 'Walter Turncoat';
+    text-align: center;
+    padding-left: 10px;
+    margin: auto;
+    font-size: 5em;
+    letter-spacing: 7px;
+    color: #C6C0BE;
 }
