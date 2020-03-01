@@ -16,7 +16,13 @@ namespace MigraineBlog.Repositories
         }
         public void Create(Post post)
         {
+            PostTag postTag = new PostTag();
             db.Posts.Add(post);
+            db.SaveChanges();
+
+            postTag.PostId = post.Id;
+            postTag.TagId = post.TagId;
+            db.PostTags.Add(postTag);
             db.SaveChanges();
         }
 

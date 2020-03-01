@@ -5,6 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20200301162238_TestingTagIdInPostModelForSelectTag.cs" />
+    <Compile Remove="Migrations\20200301162238_TestingTagIdInPostModelForSelectTag.Designer.cs" />
+    <Compile Remove="Migrations\20200301162648_TestingTagIdInPostModelForSelectTag.cs" />
+    <Compile Remove="Migrations\20200301162648_TestingTagIdInPostModelForSelectTag.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="wwwroot\images\" />
   </ItemGroup>
 
