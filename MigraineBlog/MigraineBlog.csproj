@@ -9,10 +9,8 @@
     <Compile Remove="Migrations\20200301162238_TestingTagIdInPostModelForSelectTag.Designer.cs" />
     <Compile Remove="Migrations\20200301162648_TestingTagIdInPostModelForSelectTag.cs" />
     <Compile Remove="Migrations\20200301162648_TestingTagIdInPostModelForSelectTag.Designer.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="wwwroot\images\" />
+    <Compile Remove="Migrations\20200302003458_DataDeleted.cs" />
+    <Compile Remove="Migrations\20200302003458_DataDeleted.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

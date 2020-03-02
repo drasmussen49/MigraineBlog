@@ -8,28 +8,40 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Details</title>
+    <title>@Model.Title</title>
+    <link href="~/css/NavStyle.css" rel="stylesheet" />
+    <link href="~/css/OverallStyle.css" rel="stylesheet" />
+    <link href="~/css/ListStyle.css" rel="stylesheet" />
+    <link href="~/css/CrudSheet.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Hind+Vadodara:500|Rock+Salt|Walter+Turncoat&display=swap" rel="stylesheet">
 </head>
-<body>       
+<body>
 
-    <div class="flex-items">
-        <h4>"@Model.Title"  written by @Model.Author on @DateTime.Now.ToString("MM/dd/yyyy")</h4>
+    <div class="container-item">
+        <h2>"@Model.Title"  written by @Model.Author on @DateTime.Now.ToString("MM/dd/yyyy")</h2>
         <p>@Model.Body</p>
 
-    @foreach(var tag in Model.PostTags)
-    {
-        <p>@tag.Tag.Name</p>
-    }
-    </div>
-    <div class="flex-links">
-        
-        <a href="/Post/Update/@Model.Id">Update This Post</a>
-        <a href="/Post/Delete/@Model.Id">Delete This Post</a>
-    </div>
-    <br />
-    <div>
-        <a href="/Category/Details/@Model.CategoryId">Back to Blog</a>
+        @foreach (var tag in Model.PostTags)
+        {
+            <div class="tag">@tag.Tag.Name</div>
+        }
     </div>
 
+    <div>
+        <a href="/Post/Update/@Model.Id"><button class="button">Update This Post</button></a>
+        <a href="/Post/Delete/@Model.Id"><button class="button">Delete This Post</button></a>
+    </div>
+
+    <br />
+
+    <div>
+        <a href="/Category/Details/@Model.CategoryId"><button class="button">Return to "@Model.Category.Name"</button></a>
+    </div>
+
+    <nav>
+        <a href="~/Home/Index"> HOME </a>
+        <a href="~/Category/Index"> BLOGS </a>
+        <a href="~/Home/Index/#aboutUs"> ABOUT </a>
+    </nav>
 </body>
 </html>

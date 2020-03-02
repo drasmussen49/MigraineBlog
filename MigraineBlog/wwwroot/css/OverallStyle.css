@@ -1,0 +1,54 @@
+﻿* {    
+    font-family: 'Didact Gothic';
+    line-height: 1.7em;
+    box-sizing: border-box;
+}
+
+body {
+    margin-left: 3em;
+}
+
+html {
+    margin-top: 3em;
+    font-size: 14px;
+    background: #4C5D68;
+    color: white;
+}
+
+h1 {
+    font-family: 'Hind Vadodara';
+    font-size: 5em;
+    letter-spacing: 7px;
+    font-variant: small-caps;
+    color: #F3B88D;
+    margin: 0 auto .5em auto;
+}
+
+h2 {
+    letter-spacing: 3px;
+    margin: 0;
+    padding: 0;
+    color: #F3B88D;
+}
+
+
+
+.button {
+    background: rgba(243, 184, 141, .5);
+    border: none;
+    font-size: 18px;
+    padding: .5em;
+    color: white;
+}
+
+    .button:hover {
+        background: #F3B88D;
+    }
+
+.tag {
+    color: #F3B88D;
+}
+
+footer {
+    text-align: left;
+}

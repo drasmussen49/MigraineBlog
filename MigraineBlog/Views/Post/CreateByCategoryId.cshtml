@@ -10,31 +10,36 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>CreateByCategoryId</title>
+    <title>Create a Post</title>
+    <link href="~/css/NavStyle.css" rel="stylesheet" />
+    <link href="~/css/OverallStyle.css" rel="stylesheet" />
+    <link href="~/css/ListStyle.css" rel="stylesheet" />
     <link href="~/css/CrudSheet.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Hind+Vadodara:500|Rock+Salt|Walter+Turncoat&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="crudflexbox">
-        <h4>Post on the "@ViewBag.CategoryName" Blog!</h4>
+    <div class="crudbox">
+        <h2>Post on the "@ViewBag.CategoryName" Page</h2>
         <hr />
         <div class="row">
             <div class="col-md-4">
                 <form asp-action="Create" method="post">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <div class="form-group">
-                        <label asp-for="Title" class="control-label"></label>
+                        <h2><label asp-for="Title" class="control-label">Title: </label></h2>
                         <input asp-for="Title" class="form-control" />
                         <span asp-validation-for="Title" class="text-danger"></span>
                     </div>
+                    <br />
                     <div class="form-group">
-                        <label asp-for="Author" class="control-label"></label>
+                        <h2><label asp-for="Author" class="control-label">Your Name: </label></h2>
                         <input asp-for="Author" class="form-control" />
                         <span asp-validation-for="Author" class="text-danger"></span>
                     </div>
-                    <br />
-                    <br />
+                    <br />                    
                     <div class="form-group">
-                        <div><label asp-for="Body" class="control-label"></label></div>
+                        <div><h2><label asp-for="Body" class="control-label">Enter Your Post: </label>
+                            </h2></div>
                         <textarea asp-for="Body" class="form-control" cols="30" rows="10"></textarea>
                         <span asp-validation-for="Body" class="text-danger"></span>
                     </div>
@@ -42,33 +47,43 @@
                         <input value="@DateTime.Now.ToString("MM/dd/yyyy")" type="hidden" class="form-control" />
                     </div>
                     <div class="form-group">
-                        @*<label asp-for="CategoryId" class="control-label"></label>*@
+                        
                         <input name="CategoryId" type="hidden" value=@ViewBag.CategoryId class="form-control" />
                         <span asp-validation-for="CategoryId" class="text-danger"></span>
                     </div>
+                    <br />
                     <div class="form-group">
-                        <label asp-for="TagId" class="control-label"></label>
-                        @*<input asp-for="TagId" class="form-control" />
-                        <span asp-validation-for="TagId" class="text-danger"></span>*@
-                    <select name="TagId">
-                        <option value="1">#BadDay</option>
-                        <option value="2">#SOS</option>
-                        <option value="3">#Relief</option>
-                        <option value="4">#Triggers</option>
-                        <option value="5">#Advice</option>
-                    </select>
+                        <h2><label asp-for="TagId" class="control-label">Select Related Tag(s): </label>
+                        </h2>
+                        
+                        <select name="TagId">
+                            <option value="1">#BadDay</option>
+                            <option value="2">#SOS</option>
+                            <option value="3">#Relief</option>
+                            <option value="4">#Triggers</option>
+                            <option value="5">#Advice</option>
+                        </select>
                     </div>
-                    <div class="form-group">
-                        <input type="submit" value="Create" class="btn btn-primary" />
+                    <br />
+                    <br />
+                    <div class="submit-button">
+                        <input id="submitButton" type="submit" value="Create" class="btn btn-primary" />
                     </div>
                 </form>
             </div>
         </div>
+        <br />
 
         <div>
-            <a href="/Category/Details/@ViewBag.CategoryId">Back to List</a>
+            <a href="/Category/Details/@ViewBag.CategoryId"><button class="button">Back to "@ViewBag.CategoryName"</button></a>
         </div>
     </div>
+
+    <nav>
+        <a href="~/Home/Index"> HOME </a>
+        <a href="~/Category/Index"> BLOGS </a>
+        <a href="~/Home/Index/#aboutUs"> ABOUT </a>
+    </nav>
 
 </body>
 </html>

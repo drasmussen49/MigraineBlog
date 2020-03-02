@@ -8,24 +8,40 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Category Index</title>
+    <title>Blog Topics</title>
+    <link href="~/css/NavStyle.css" rel="stylesheet" />
+    <link href="~/css/OverallStyle.css" rel="stylesheet" />
+    <link href="~/css/ListStyle.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Hind+Vadodara:500|Rock+Salt|Walter+Turncoat&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="header">Blog Categories:</div>
+    
     <div class="categories">
-        <div class="flex-container">
+        
+            <h1>Topics</h1>
+            <hr />
 
             @foreach (var category in Model)
             {
-                <div class="flex-item">
-                    <h3 class="flex-element">@category.Name</h3>
+                <div class="container-item">
+                    <h2>@category.Name</h2>
                     <div>
                         <p>@category.Description</p>
                     </div>
-                    <a href="/Category/Details/@category.Id" class="flex-element">To the blog</a>
+                    <a href="/Category/Details/@category.Id" class="flex-element"><button class="button">Visit This Topic</button></a>
                 </div>
             }
-        </div>
+        
     </div>
+
+    <nav>
+        <a href="~/Home/Index"> HOME </a>
+        <a href="~/Category/Index"> BLOGS </a>
+        <a href="~/Home/Index/#aboutUs"> ABOUT </a>
+    </nav>
+
 </body>
+<footer>
+    <p>Dan Rasmussen | Rhianna Teetzel | 2020</p>
+</footer>
 </html>

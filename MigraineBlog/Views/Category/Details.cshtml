@@ -8,21 +8,23 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Category</title>
+    <title>@Model.Name</title>
+    <link href="~/css/NavStyle.css" rel="stylesheet" />
+    <link href="~/css/OverallStyle.css" rel="stylesheet" />
+    <link href="~/css/ListStyle.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Hind+Vadodara:500|Rock+Salt|Walter+Turncoat&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h2>@Model.Name</h2>
+    <h1>@Model.Name</h1>
+    <hr />
 
     @foreach (var post in Model.Posts)
     {
-        <div class="flex-items">
-            <h4>"@post.Title"  written by @post.Author on @DateTime.Now.ToString("MM/dd/yyyy")</h4>
+        <div class="container-item">
+            <h2>"@post.Title"  written by @post.Author on @DateTime.Now.ToString("MM/dd/yyyy")</h2>
             <p>@post.Body</p>
-        </div>
-        <div class="flex-links">
-            <a href="/Post/Details/@post.Id">Post Details</a>
-            @*<a href="/Post/Update/@post.Id">Update This Post</a>
-            <a href="/Post/Delete/@post.Id">Delete This Post</a>*@
+            
+            <a href="/Post/Details/@post.Id"><button class="button">Expand Post</button></a>
         </div>
     }
     <br />
@@ -30,12 +32,17 @@
 
 
     <div>
-        <a href="/Post/CreateByCategoryId/@Model.Id/@Model.Name">Create a blog post!</a>
+        <a href="/Post/CreateByCategoryId/@Model.Id/@Model.Name">
+        <button class="button">Create a blog post</button></a>
+        <a href="/Category/Index"><button class="button">Return to Blog Topics</button></a>
     </div>
     <br />
-    <div>
-        <a href="/Category/Index">Return to Category Index</a>
-    </div>
+    
+    <nav>
+        <a href="~/Home/Index"> HOME </a>
+        <a href="~/Category/Index"> BLOGS </a>
+        <a href="~/Home/Index/#aboutUs"> ABOUT </a>
+    </nav>
 
 </body>
 </html>
