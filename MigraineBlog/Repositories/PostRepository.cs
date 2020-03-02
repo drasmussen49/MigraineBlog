@@ -44,7 +44,11 @@ namespace MigraineBlog.Repositories
 
         public void Update(Post post)
         {
+            PostTag postTag = new PostTag();
             db.Posts.Update(post);
+            postTag.PostId = post.Id;
+            postTag.TagId = post.TagId;
+            db.PostTags.Add(postTag);
             db.SaveChanges();
         }
     }
