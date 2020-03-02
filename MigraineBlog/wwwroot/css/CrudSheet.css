@@ -1,9 +1,46 @@
-﻿.crudflexbox {
-    display: grid;
-    grid-template-columns: 1fr;
-    max-width: 600px;
-    text-align: center;
-    margin: auto;
-    border: 3px solid black;
-    padding: 1em;
+﻿.crudbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: rgba(198, 192, 190, .45);
+    min-width: .5vw;
+    max-width: 70vw;
+    margin: 2em 0 5em 0;
+    padding: 2em;
+}
+
+#button {
+    background: rgba(243, 184, 141, .5);
+    border: none;
+    font-size: 18px;
+    padding: .5em;
+    color: white;
+}
+
+    #button:hover {
+        background: #F3B88D;
+    }
+
+#submitButton.btn.btn-primary {
+    background: rgba(243, 184, 141, .5);
+    border: none;
+    font-size: 18px;
+    padding: .5em;
+    color: white;
+}
+
+    #submitButton.btn.btn-primary:hover {
+        background: #F3B88D;
+    }
+
+#submitButton.btn.btn-danger {
+    background: rgba(243, 184, 141, .5);
+    border: none;
+    font-size: 18px;
+    padding: .5em;
+    color: white;
+}
+    #submitButton.btn.btn-danger:hover {
+    background: #F3B88D;
 }
